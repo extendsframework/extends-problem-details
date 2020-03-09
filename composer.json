@@ -24,12 +24,12 @@
     },
     "autoload": {
         "psr-4": {
-            "ExtendsFramework\\Hateoas\\": "src/"
+            "ExtendsFramework\\Problem\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ExtendsFramework\\Hateoas\\": "test/"
+            "ExtendsFramework\\Problem\\": "test/"
         }
     }
 }

@@ -23,6 +23,10 @@ class ProblemMiddlewareTest extends TestCase
     public function testProcess(): void
     {
         $problem = $this->createMock(ProblemInterface::class);
+        $problem
+            ->expects($this->once())
+            ->method('getStatus')
+            ->willReturn(400);
 
         $serializer = $this->createMock(SerializerInterface::class);
         $serializer
@@ -50,6 +54,12 @@ class ProblemMiddlewareTest extends TestCase
             ->expects($this->once())
             ->method('withBody')
             ->with('{"type":"/foo/bar}')
+            ->willReturnSelf();
+
+        $response
+            ->expects($this->once())
+            ->method('withStatusCode')
+            ->with(400)
             ->willReturnSelf();
 
         $request = $this->createMock(RequestInterface::class);

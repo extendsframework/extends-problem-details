@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace ExtendsFramework\Problem\Serializer\Json;
+namespace ExtendsFramework\ProblemDetails\Serializer\Json;
 
-use ExtendsFramework\Problem\ProblemInterface;
-use ExtendsFramework\Problem\Serializer\SerializerInterface;
+use ExtendsFramework\ProblemDetails\ProblemInterface;
+use ExtendsFramework\ProblemDetails\Serializer\SerializerInterface;
 
 class JsonSerializer implements SerializerInterface
 {

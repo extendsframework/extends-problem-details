@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace ExtendsFramework\Problem\Serializer\Json;
+namespace ExtendsFramework\ProblemDetails\Serializer\Json;
 
-use ExtendsFramework\Problem\ProblemInterface;
+use ExtendsFramework\ProblemDetails\ProblemInterface;
 use PHPUnit\Framework\TestCase;
 
 class JsonSerializerTest extends TestCase
@@ -13,7 +13,7 @@ class JsonSerializerTest extends TestCase
      *
      * Test that serialize will return correct JSON string.
      *
-     * @covers \ExtendsFramework\Problem\Serializer\Json\JsonSerializer::serialize()
+     * @covers \ExtendsFramework\ProblemDetails\Serializer\Json\JsonSerializer::serialize()
      */
     public function testSerialize(): void
     {

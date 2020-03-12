@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace ExtendsFramework\Problem\Framework\Http\Middleware;
+namespace ExtendsFramework\ProblemDetails\Framework\Http\Middleware;
 
 use ExtendsFramework\Http\Middleware\Chain\MiddlewareChainInterface;
 use ExtendsFramework\Http\Request\RequestInterface;
 use ExtendsFramework\Http\Response\ResponseInterface;
-use ExtendsFramework\Problem\ProblemInterface;
-use ExtendsFramework\Problem\Serializer\SerializerInterface;
+use ExtendsFramework\ProblemDetails\ProblemInterface;
+use ExtendsFramework\ProblemDetails\Serializer\SerializerInterface;
 use PHPUnit\Framework\TestCase;
 
 class ProblemMiddlewareTest extends TestCase
@@ -17,8 +17,8 @@ class ProblemMiddlewareTest extends TestCase
      *
      * Test that middleware will serialize problem response body.
      *
-     * @covers \ExtendsFramework\Problem\Framework\Http\Middleware\ProblemMiddleware::__construct()
-     * @covers \ExtendsFramework\Problem\Framework\Http\Middleware\ProblemMiddleware::process
+     * @covers \ExtendsFramework\ProblemDetails\Framework\Http\Middleware\ProblemMiddleware::__construct()
+     * @covers \ExtendsFramework\ProblemDetails\Framework\Http\Middleware\ProblemMiddleware::process
      */
     public function testProcess(): void
     {

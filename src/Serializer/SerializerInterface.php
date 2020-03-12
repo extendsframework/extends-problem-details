@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace ExtendsFramework\Problem\Serializer;
+namespace ExtendsFramework\ProblemDetails\Serializer;
 
-use ExtendsFramework\Problem\ProblemInterface;
+use ExtendsFramework\ProblemDetails\ProblemInterface;
 
 interface SerializerInterface
 {

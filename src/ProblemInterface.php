@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace ExtendsFramework\Problem;
+namespace ExtendsFramework\ProblemDetails;
 
 interface ProblemInterface
 {

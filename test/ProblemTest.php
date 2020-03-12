@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace ExtendsFramework\Problem;
+namespace ExtendsFramework\ProblemDetails;
 
 use PHPUnit\Framework\TestCase;
 
@@ -12,13 +12,13 @@ class ProblemTest extends TestCase
      *
      * Test that getters will return correct values.
      *
-     * @covers \ExtendsFramework\Problem\Problem::__construct()
-     * @covers \ExtendsFramework\Problem\Problem::getType()
-     * @covers \ExtendsFramework\Problem\Problem::getTitle()
-     * @covers \ExtendsFramework\Problem\Problem::getDetail()
-     * @covers \ExtendsFramework\Problem\Problem::getStatus()
-     * @covers \ExtendsFramework\Problem\Problem::getInstance()
-     * @covers \ExtendsFramework\Problem\Problem::getAdditional()
+     * @covers \ExtendsFramework\ProblemDetails\Problem::__construct()
+     * @covers \ExtendsFramework\ProblemDetails\Problem::getType()
+     * @covers \ExtendsFramework\ProblemDetails\Problem::getTitle()
+     * @covers \ExtendsFramework\ProblemDetails\Problem::getDetail()
+     * @covers \ExtendsFramework\ProblemDetails\Problem::getStatus()
+     * @covers \ExtendsFramework\ProblemDetails\Problem::getInstance()
+     * @covers \ExtendsFramework\ProblemDetails\Problem::getAdditional()
      */
     public function testGetters(): void
     {

@@ -1,14 +1,14 @@
 <?php
 declare(strict_types=1);
 
-namespace ExtendsFramework\Problem\Framework\Http\Middleware;
+namespace ExtendsFramework\ProblemDetails\Framework\Http\Middleware;
 
 use ExtendsFramework\Http\Middleware\Chain\MiddlewareChainInterface;
 use ExtendsFramework\Http\Middleware\MiddlewareInterface;
 use ExtendsFramework\Http\Request\RequestInterface;
 use ExtendsFramework\Http\Response\ResponseInterface;
-use ExtendsFramework\Problem\ProblemInterface;
-use ExtendsFramework\Problem\Serializer\SerializerInterface;
+use ExtendsFramework\ProblemDetails\ProblemInterface;
+use ExtendsFramework\ProblemDetails\Serializer\SerializerInterface;
 
 class ProblemMiddleware implements MiddlewareInterface
 {

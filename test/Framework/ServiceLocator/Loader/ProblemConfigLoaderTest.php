@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace ExtendsFramework\ProblemDetails\Framework\ServiceLocator\Loader;
 
-use ExtendsFramework\ProblemDetails\Framework\Http\Middleware\ProblemMiddleware;
+use ExtendsFramework\ProblemDetails\Framework\Http\Middleware\ProblemDetailsMiddleware;
 use ExtendsFramework\ProblemDetails\Serializer\Json\JsonSerializer;
 use ExtendsFramework\ProblemDetails\Serializer\SerializerInterface;
 use ExtendsFramework\ServiceLocator\Resolver\Invokable\InvokableResolver;
@@ -18,16 +18,16 @@ class ProblemConfigLoaderTest extends TestCase
      *
      * Test that loader will return correct config.
      *
-     * @covers \ExtendsFramework\ProblemDetails\Framework\ServiceLocator\Loader\ProblemConfigLoader::load()
+     * @covers \ExtendsFramework\ProblemDetails\Framework\ServiceLocator\Loader\ProblemDetailsConfigLoader::load()
      */
     public function testProcess(): void
     {
-        $loader = new ProblemConfigLoader();
+        $loader = new ProblemDetailsConfigLoader();
         $this->assertSame(
             [
                 ServiceLocatorInterface::class => [
                     ReflectionResolver::class => [
-                        ProblemMiddleware::class => ProblemMiddleware::class,
+                        ProblemDetailsMiddleware::class => ProblemDetailsMiddleware::class,
                     ],
                     InvokableResolver::class => [
                         SerializerInterface::class => JsonSerializer::class,

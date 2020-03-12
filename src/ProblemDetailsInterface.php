@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace ExtendsFramework\ProblemDetails;
 
-interface ProblemInterface
+interface ProblemDetailsInterface
 {
     /**
      * Get type.

@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace ExtendsFramework\ProblemDetails;
 
-class Problem implements ProblemInterface
+class ProblemDetails implements ProblemDetailsInterface
 {
     /**
      * Type.

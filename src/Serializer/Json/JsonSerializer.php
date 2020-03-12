@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace ExtendsFramework\ProblemDetails\Serializer\Json;
 
-use ExtendsFramework\ProblemDetails\ProblemInterface;
+use ExtendsFramework\ProblemDetails\ProblemDetailsInterface;
 use ExtendsFramework\ProblemDetails\Serializer\SerializerInterface;
 
 class JsonSerializer implements SerializerInterface
@@ -11,7 +11,7 @@ class JsonSerializer implements SerializerInterface
     /**
      * @inheritDoc
      */
-    public function serialize(ProblemInterface $problem): string
+    public function serialize(ProblemDetailsInterface $problem): string
     {
         return json_encode(
             array_filter(

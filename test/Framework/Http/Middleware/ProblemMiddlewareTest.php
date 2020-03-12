@@ -6,7 +6,7 @@ namespace ExtendsFramework\ProblemDetails\Framework\Http\Middleware;
 use ExtendsFramework\Http\Middleware\Chain\MiddlewareChainInterface;
 use ExtendsFramework\Http\Request\RequestInterface;
 use ExtendsFramework\Http\Response\ResponseInterface;
-use ExtendsFramework\ProblemDetails\ProblemInterface;
+use ExtendsFramework\ProblemDetails\ProblemDetailsInterface;
 use ExtendsFramework\ProblemDetails\Serializer\SerializerInterface;
 use PHPUnit\Framework\TestCase;
 
@@ -17,12 +17,12 @@ class ProblemMiddlewareTest extends TestCase
      *
      * Test that middleware will serialize problem response body.
      *
-     * @covers \ExtendsFramework\ProblemDetails\Framework\Http\Middleware\ProblemMiddleware::__construct()
-     * @covers \ExtendsFramework\ProblemDetails\Framework\Http\Middleware\ProblemMiddleware::process
+     * @covers \ExtendsFramework\ProblemDetails\Framework\Http\Middleware\ProblemDetailsMiddleware::__construct()
+     * @covers \ExtendsFramework\ProblemDetails\Framework\Http\Middleware\ProblemDetailsMiddleware::process
      */
     public function testProcess(): void
     {
-        $problem = $this->createMock(ProblemInterface::class);
+        $problem = $this->createMock(ProblemDetailsInterface::class);
         $problem
             ->expects($this->once())
             ->method('getStatus')
@@ -76,7 +76,7 @@ class ProblemMiddlewareTest extends TestCase
          * @var RequestInterface $request
          * @var MiddlewareChainInterface $chain
          */
-        $middleware = new ProblemMiddleware($serializer);
+        $middleware = new ProblemDetailsMiddleware($serializer);
 
         $this->assertSame($response, $middleware->process($request, $chain));
     }

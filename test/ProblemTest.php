@@ -12,17 +12,17 @@ class ProblemTest extends TestCase
      *
      * Test that getters will return correct values.
      *
-     * @covers \ExtendsFramework\ProblemDetails\Problem::__construct()
-     * @covers \ExtendsFramework\ProblemDetails\Problem::getType()
-     * @covers \ExtendsFramework\ProblemDetails\Problem::getTitle()
-     * @covers \ExtendsFramework\ProblemDetails\Problem::getDetail()
-     * @covers \ExtendsFramework\ProblemDetails\Problem::getStatus()
-     * @covers \ExtendsFramework\ProblemDetails\Problem::getInstance()
-     * @covers \ExtendsFramework\ProblemDetails\Problem::getAdditional()
+     * @covers \ExtendsFramework\ProblemDetails\ProblemDetails::__construct()
+     * @covers \ExtendsFramework\ProblemDetails\ProblemDetails::getType()
+     * @covers \ExtendsFramework\ProblemDetails\ProblemDetails::getTitle()
+     * @covers \ExtendsFramework\ProblemDetails\ProblemDetails::getDetail()
+     * @covers \ExtendsFramework\ProblemDetails\ProblemDetails::getStatus()
+     * @covers \ExtendsFramework\ProblemDetails\ProblemDetails::getInstance()
+     * @covers \ExtendsFramework\ProblemDetails\ProblemDetails::getAdditional()
      */
     public function testGetters(): void
     {
-        $problem = new Problem(
+        $problem = new ProblemDetails(
             '/foo/type',
             'Problem title',
             'Problem detail',

@@ -7,10 +7,10 @@ use ExtendsFramework\Http\Middleware\Chain\MiddlewareChainInterface;
 use ExtendsFramework\Http\Middleware\MiddlewareInterface;
 use ExtendsFramework\Http\Request\RequestInterface;
 use ExtendsFramework\Http\Response\ResponseInterface;
-use ExtendsFramework\ProblemDetails\ProblemInterface;
+use ExtendsFramework\ProblemDetails\ProblemDetailsInterface;
 use ExtendsFramework\ProblemDetails\Serializer\SerializerInterface;
 
-class ProblemMiddleware implements MiddlewareInterface
+class ProblemDetailsMiddleware implements MiddlewareInterface
 {
     /**
      * Problem serializer.
@@ -36,7 +36,7 @@ class ProblemMiddleware implements MiddlewareInterface
     {
         $response = $chain->proceed($request);
         $body = $response->getBody();
-        if ($body instanceof ProblemInterface) {
+        if ($body instanceof ProblemDetailsInterface) {
             $serialized = $this->serializer->serialize($body);
 
             $response = $response

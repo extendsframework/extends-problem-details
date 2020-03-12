@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace ExtendsFramework\ProblemDetails\Serializer\Json;
 
-use ExtendsFramework\ProblemDetails\ProblemInterface;
+use ExtendsFramework\ProblemDetails\ProblemDetailsInterface;
 use PHPUnit\Framework\TestCase;
 
 class JsonSerializerTest extends TestCase
@@ -17,7 +17,7 @@ class JsonSerializerTest extends TestCase
      */
     public function testSerialize(): void
     {
-        $problem = $this->createMock(ProblemInterface::class);
+        $problem = $this->createMock(ProblemDetailsInterface::class);
         $problem
             ->expects($this->once())
             ->method('getType')
@@ -51,7 +51,7 @@ class JsonSerializerTest extends TestCase
             ]);
 
         /**
-         * @var ProblemInterface $problem
+         * @var ProblemDetailsInterface $problem
          */
         $serializer = new JsonSerializer();
 

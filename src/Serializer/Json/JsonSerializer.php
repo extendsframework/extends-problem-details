@@ -25,7 +25,8 @@ class JsonSerializer implements SerializerInterface
                     ],
                     $problem->getAdditional() ?: []
                 )
-            )
+            ),
+            JSON_UNESCAPED_SLASHES
         );
     }
 }

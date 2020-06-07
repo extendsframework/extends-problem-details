@@ -63,7 +63,7 @@ class JsonSerializerTest extends TestCase
                 'status' => 400,
                 'instance' => '/foo/instance',
                 'foo' => 'bar',
-            ]),
+            ], JSON_UNESCAPED_SLASHES),
             $serializer->serialize($problem)
         );
     }
